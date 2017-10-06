@@ -43,6 +43,15 @@ describe('Pawn', () => {
             moves.should.be.empty;
         });
 
+        it('cannot move at the top of the board', () => {
+            const pawn = new Pawn(Player.WHITE);
+            board.setPiece(Square.at(7, 3), pawn);
+
+            const moves = pawn.getAvailableMoves(board);
+
+            moves.should.be.empty;
+        });
+
         it('can move diagonally if there is a piece to take', () => {
             const pawn = new Pawn(Player.WHITE);
             const opposingPiece = new Rook(Player.BLACK);
