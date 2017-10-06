@@ -11,9 +11,6 @@ export default class Pawn extends Piece {
         let location = board.findPiece(this)
         const moves = []
 
-
-
-
         if (this.player === Player.WHITE) {
 
             let blocking1Square = board.getPiece(Square.at(location.row + 1, location.col))
