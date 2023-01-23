@@ -12,6 +12,7 @@ export default class Pawn extends Piece {
         const moves = []
 
         if (this.player === Player.WHITE) {
+            if (location.row === 7) return moves
 
             let blocking1Square = board.getPiece(Square.at(location.row + 1, location.col))
             let blocking2Squares = board.getPiece(Square.at(location.row + 2, location.col))
@@ -25,6 +26,8 @@ export default class Pawn extends Piece {
 
 
         } else {
+            if (location.row === 0) return moves
+
             let blocking1Square = board.getPiece(Square.at(location.row - 1, location.col))
             let blocking2Squares = board.getPiece(Square.at(location.row - 2, location.col))
 
