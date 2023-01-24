@@ -74,5 +74,15 @@ export default class Pawn extends Piece {
 
 
 
-
+//JOE'S CODE
+// for (let i = location.col + 1; i <= 7; i++) {
+//     if (board.getPiece(Square.at(location.row, i)) === undefined) {
+//         moves.push(Square.at(location.row, i));
+//     }
+//     else if (board.getPiece(Square.at(location.row, i)).player !== this.player && !(board.getPiece(Square.at(location.row, i)) instanceof King)) {
+//         moves.push(Square.at(location.row, i));
+//         break;
+//     }
+//     else break;
+// }
 
